@@ -23,7 +23,7 @@ public class test {
 //        WebDriver driver = new ChromeDriver();
         File file = new File("/usr/local/bin/chromedriver");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-
+        System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "36000");
 
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary("/usr/bin/google-chrome");

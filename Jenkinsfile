@@ -15,7 +15,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "mvn test -Dtest='test'"
+//                 sh "mvn test -Dtest='test'"
+                   sh "mvn -o test"
             }
         }
 

@@ -42,36 +42,36 @@ public class test {
         driver.get(url);
         System.out.println("Title: " + driver.getTitle());
 
-        reporter_7(url, keyword);
+//        reporter_7(url, keyword);
 
     }
 
-    public int countSelects(String keyWord){
-        String formatedXPATH = String.format("//a[contains(text(), '%s') or contains(text(), '%s') or contains(text(), '%s')]", keyWord, keyWord.toLowerCase(Locale.ROOT), keyWord.toUpperCase(Locale.ROOT));
-        List<WebElement> elementList = driver.findElements(By.xpath(formatedXPATH));
-        return elementList.size();
-    }
-
-    public void reporter_7(String URL, String keyWord){
-
-        String outputFile = (helper.todayDateFromPattern("dd-MM-yyyy") + "_przetargi.html");
-        String style = "style='border: 1px solid black; padding: 3px; text-align: center;'";
-        try {
-            FileWriter txtOutput = new FileWriter(outputFile, true);
-
-            if(countSelects(keyWord) > 0)
-            {
-                txtOutput.write("<table " + style + ">");
-                txtOutput.write("<tr " + style + "><th "+ style + ">Wynik z dnia i godziny</th><th " + style + ">Link</th><th " + style + ">Fraza</th><th " + style + ">Ilość</th></tr>");
-                txtOutput.write("<tr " + style +"><td " + style + ">" + helper.todayDateFromPattern("HH:mm:ss dd-MM-yyyy")  + "</td><td "+ style + ">" + "<a target='_blank' href=" + URL + ">" + URL +"</a>" + "</td><td " + style+">" + keyWord +"</td><td " + style+ ">" + countSelects(keyWord) + " </td></tr>");
-                txtOutput.write("</table>");
-                txtOutput.write("</br>");
-
-                txtOutput.close();
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
+//    public int countSelects(String keyWord){
+//        String formatedXPATH = String.format("//a[contains(text(), '%s') or contains(text(), '%s') or contains(text(), '%s')]", keyWord, keyWord.toLowerCase(Locale.ROOT), keyWord.toUpperCase(Locale.ROOT));
+//        List<WebElement> elementList = driver.findElements(By.xpath(formatedXPATH));
+//        return elementList.size();
+//    }
+//
+//    public void reporter_7(String URL, String keyWord){
+//
+//        String outputFile = (helper.todayDateFromPattern("dd-MM-yyyy") + "_przetargi.html");
+//        String style = "style='border: 1px solid black; padding: 3px; text-align: center;'";
+//        try {
+//            FileWriter txtOutput = new FileWriter(outputFile, true);
+//
+//            if(countSelects(keyWord) > 0)
+//            {
+//                txtOutput.write("<table " + style + ">");
+//                txtOutput.write("<tr " + style + "><th "+ style + ">Wynik z dnia i godziny</th><th " + style + ">Link</th><th " + style + ">Fraza</th><th " + style + ">Ilość</th></tr>");
+//                txtOutput.write("<tr " + style +"><td " + style + ">" + helper.todayDateFromPattern("HH:mm:ss dd-MM-yyyy")  + "</td><td "+ style + ">" + "<a target='_blank' href=" + URL + ">" + URL +"</a>" + "</td><td " + style+">" + keyWord +"</td><td " + style+ ">" + countSelects(keyWord) + " </td></tr>");
+//                txtOutput.write("</table>");
+//                txtOutput.write("</br>");
+//
+//                txtOutput.close();
+//            }
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//}

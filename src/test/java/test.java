@@ -19,27 +19,25 @@ public class test {
 
     @Test
     public void mainTest(){
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 //        System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "36000");
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome-stable");
+        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("--headless");
-//        opt.addArguments("--window-size=1280x800");
-//        opt.addArguments("--no-sandbox");
-//        opt.addArguments("–disable-dev-shm-usage");
-//        opt.addArguments("--start-maximized");
-//        opt.addArguments("--disable-gpu");
-//        opt.addArguments("--disable-setuid-sandbox");
+        opt.addArguments("--window-size=1280x800");
+        opt.addArguments("--no-sandbox");
+        opt.addArguments("–disable-dev-shm-usage");
+        opt.addArguments("--start-maximized");
+        opt.addArguments("--disable-gpu");
+        opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);
 
-        String keyword = "test";
-        String url = "http:/google.com";
-        driver.get(url);
+        driver.get("https:/google.com");
         System.out.println("Title: " + driver.getTitle());
 
 //        reporter_7(url, keyword);

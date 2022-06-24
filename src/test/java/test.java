@@ -26,7 +26,7 @@ public class test {
 //        System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "36000");
 
         ChromeOptions opt = new ChromeOptions();
-//        opt.setBinary("/usr/bin/google-chrome");
+        opt.setBinary("/usr/bin/google-chrome-stable");
 
         opt.addArguments("--headless");
 //        opt.addArguments("--window-size=1280x800");

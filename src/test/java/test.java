@@ -19,10 +19,10 @@ public class test {
 
     @Test
     public void mainTest(){
-//        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-        File file = new File("/usr/local/bin/chromedriver");
-        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+//        File file = new File("/usr/local/bin/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 //        System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "36000");
 
         ChromeOptions opt = new ChromeOptions();
@@ -37,7 +37,7 @@ public class test {
         opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);
 
-        driver.get("https://google.com");
+        driver.get("https://www.google.com/");
         System.out.println("Title: " + driver.getTitle());
 
 //        reporter_7(url, keyword);

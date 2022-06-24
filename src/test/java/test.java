@@ -38,7 +38,7 @@ public class test {
         driver = new ChromeDriver(opt);
 
         String keyword = "test";
-        String url = "http://bip.piekary.pl/?c=179";
+        String url = "http:/google.com";
         driver.get(url);
         System.out.println("Title: " + driver.getTitle());
 

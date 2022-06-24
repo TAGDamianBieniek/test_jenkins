@@ -28,7 +28,7 @@ public class test {
 //        opt.addArguments("--start-maximized");
 //        opt.addArguments("--disable-gpu");
 //        opt.addArguments("--disable-setuid-sandbox");
-        WebDriver driver = new ChromeDriver(opt);
+        WebDriver driver = new ChromeDriver();
 
 
 //

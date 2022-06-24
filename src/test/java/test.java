@@ -12,12 +12,12 @@ public class test {
     public void mainTest(){
         String x = "..............STRING............";
         System.out.println(x);
-//        WebDriverManager.chromedriver().setup();
-////        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-//
-//
+        WebDriverManager.chromedriver().setup();
+//        WebDriver driver = new ChromeDriver();
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+
+
 //        ChromeOptions opt = new ChromeOptions();
 //        opt.setBinary("/usr/bin/google-chrome");
 //

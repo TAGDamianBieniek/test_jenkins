@@ -18,8 +18,8 @@ public class test {
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
 
-//        ChromeOptions opt = new ChromeOptions();
-//        opt.setBinary("/usr/bin/google-chrome");
+        ChromeOptions opt = new ChromeOptions();
+        opt.setBinary("/usr/bin/google-chrome");
 //
 //        opt.addArguments("--headless");
 //        opt.addArguments("--window-size=1280x800");
@@ -28,7 +28,7 @@ public class test {
 //        opt.addArguments("--start-maximized");
 //        opt.addArguments("--disable-gpu");
 //        opt.addArguments("--disable-setuid-sandbox");
-//        WebDriver driver = new ChromeDriver(opt);
+        WebDriver driver = new ChromeDriver(opt);
 
 
 //

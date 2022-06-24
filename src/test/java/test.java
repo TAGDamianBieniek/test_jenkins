@@ -1,5 +1,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
@@ -7,6 +8,8 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 public class test {
+WebDriver driver;
+
 
     @Test
     public void mainTest(){
@@ -28,7 +31,7 @@ public class test {
 //        opt.addArguments("--start-maximized");
 //        opt.addArguments("--disable-gpu");
 //        opt.addArguments("--disable-setuid-sandbox");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver(opt);
 
 
 //

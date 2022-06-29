@@ -30,21 +30,18 @@ public class test {
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary("/usr/bin/google-chrome");
 
-        opt.addArguments("--headless");
+        opt.addArguments("headless");
 //        opt.addArguments("window-size=1280x800");
-        opt.addArguments("--no-sandbox");
+        opt.addArguments("no-sandbox");
         opt.addArguments("–disable-dev-shm-usage");
         opt.addArguments("--start-maximized");
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);
 
-
-
-
         String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";
-        driver.get(url);
+        driver.get("http://bip.piekary.pl/?c=179");
         System.out.println("Title: " + driver.getTitle());
 
 //        System.out.println(countSelects(keyword));

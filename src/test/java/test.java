@@ -43,7 +43,7 @@ public class test {
         System.out.println("Title: " + driver.getTitle());
 
         System.out.println(countSelects(keyword));
-        reporter_7(url, keyword);
+//        reporter_7(url, keyword);
 
     }
 
@@ -53,30 +53,30 @@ public class test {
         return elementList.size();
     }
 
-    public void reporter_7(String URL, String keyWord){
-
-        String outputFile = (helper.todayDateFromPattern("dd-MM-yyyy") + "_przetargi.html");
-        String style = "style='border: 1px solid black; padding: 3px; text-align: center;'";
-        try {
-            FileWriter txtOutput = new FileWriter(outputFile, true);
-
-
-            if(countSelects(keyWord) > 0)
-            {
-                txtOutput.write("<table " + style + ">");
-                txtOutput.write("<tr " + style + "><th "+ style + ">Wynik z dnia i godziny</th><th " + style + ">Link</th><th " + style + ">Fraza</th><th " + style + ">Ilość</th></tr>");
-                txtOutput.write("<tr " + style +"><td " + style + ">" + helper.todayDateFromPattern("HH:mm:ss dd-MM-yyyy")  + "</td><td "+ style + ">" + "<a target='_blank' href=" + URL + ">" + URL +"</a>" + "</td><td " + style+">" + keyWord +"</td><td " + style+ ">" + countSelects(keyWord) + " </td></tr>");
-                txtOutput.write("</table>");
-                txtOutput.write("</br>");
-
-                txtOutput.close();
-            }
-            else{
-                txtOutput.write("<p> Brak wyników </p>");
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void reporter_7(String URL, String keyWord){
+//
+//        String outputFile = (helper.todayDateFromPattern("dd-MM-yyyy") + "_przetargi.html");
+//        String style = "style='border: 1px solid black; padding: 3px; text-align: center;'";
+//        try {
+//            FileWriter txtOutput = new FileWriter(outputFile, true);
+//
+//
+//            if(countSelects(keyWord) > 0)
+//            {
+//                txtOutput.write("<table " + style + ">");
+//                txtOutput.write("<tr " + style + "><th "+ style + ">Wynik z dnia i godziny</th><th " + style + ">Link</th><th " + style + ">Fraza</th><th " + style + ">Ilość</th></tr>");
+//                txtOutput.write("<tr " + style +"><td " + style + ">" + helper.todayDateFromPattern("HH:mm:ss dd-MM-yyyy")  + "</td><td "+ style + ">" + "<a target='_blank' href=" + URL + ">" + URL +"</a>" + "</td><td " + style+">" + keyWord +"</td><td " + style+ ">" + countSelects(keyWord) + " </td></tr>");
+//                txtOutput.write("</table>");
+//                txtOutput.write("</br>");
+//
+//                txtOutput.close();
+//            }
+//            else{
+//                txtOutput.write("<p> Brak wyników </p>");
+//            }
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

@@ -26,7 +26,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome");
+//        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("headless");
         opt.addArguments("window-size=1280x800");
@@ -37,11 +37,12 @@ public class test {
         opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);
 
-        String keyword = "test";
+        String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";
         driver.get(url);
         System.out.println("Title: " + driver.getTitle());
 
+        System.out.println(countSelects(keyword));
         reporter_7(url, keyword);
 
     }
@@ -59,6 +60,7 @@ public class test {
         try {
             FileWriter txtOutput = new FileWriter(outputFile, true);
 
+
             if(countSelects(keyWord) > 0)
             {
                 txtOutput.write("<table " + style + ">");
@@ -68,6 +70,9 @@ public class test {
                 txtOutput.write("</br>");
 
                 txtOutput.close();
+            }
+            else{
+                txtOutput.write("<p> Brak wyników </p>");
             }
 
         } catch (IOException e) {

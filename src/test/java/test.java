@@ -19,6 +19,8 @@ public class test {
 
     @Test
     public void mainTest(){
+
+        System.out.println("TEST.................................................");
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
         File file = new File("/usr/local/bin/chromedriver");
@@ -42,16 +44,16 @@ public class test {
         driver.get(url);
         System.out.println("Title: " + driver.getTitle());
 
-        System.out.println(countSelects(keyword));
+//        System.out.println(countSelects(keyword));
 //        reporter_7(url, keyword);
 
     }
 
-    public int countSelects(String keyWord){
-        String formatedXPATH = String.format("//a[contains(text(), '%s') or contains(text(), '%s') or contains(text(), '%s')]", keyWord, keyWord.toLowerCase(Locale.ROOT), keyWord.toUpperCase(Locale.ROOT));
-        List<WebElement> elementList = driver.findElements(By.xpath(formatedXPATH));
-        return elementList.size();
-    }
+//    public int countSelects(String keyWord){
+//        String formatedXPATH = String.format("//a[contains(text(), '%s') or contains(text(), '%s') or contains(text(), '%s')]", keyWord, keyWord.toLowerCase(Locale.ROOT), keyWord.toUpperCase(Locale.ROOT));
+//        List<WebElement> elementList = driver.findElements(By.xpath(formatedXPATH));
+//        return elementList.size();
+//    }
 
 //    public void reporter_7(String URL, String keyWord){
 //

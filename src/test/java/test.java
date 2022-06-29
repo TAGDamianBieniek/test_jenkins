@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class test {
-    WebDriver driver;
+
     Helpers helper = new Helpers();
 
     @Test
@@ -37,7 +37,7 @@ public class test {
         opt.addArguments("--disable-setuid-sandbox");
 
         opt.setBinary("/usr/bin/google-chrome");
-        driver = new ChromeDriver(opt);
+        WebDriver driver = new ChromeDriver(opt);
 
         String keyword = "test";
         String url = "http://bip.piekary.pl/?c=179";

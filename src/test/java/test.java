@@ -18,9 +18,8 @@ public class test {
     WebDriver driver;
     Helpers helper = new Helpers();
 
-    @BeforeTest
-    public void setup()
-    {
+    @Test
+    public void mainTest(){
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
         File file = new File("/usr/local/bin/chromedriver");
@@ -38,10 +37,6 @@ public class test {
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);
-    }
-
-    @Test
-    public void mainTest(){
 
         System.out.println("TEST.................................................");
 

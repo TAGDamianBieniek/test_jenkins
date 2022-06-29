@@ -26,7 +26,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-//        opt.setBinary("/usr/bin/google-chrome-stable");
+        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("headless");
         opt.addArguments("window-size=1280x800");

@@ -26,15 +26,17 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome");
 
+
+        opt.addArguments("no-sandbox");
         opt.addArguments("headless");
         opt.addArguments("window-size=1280x800");
-        opt.addArguments("no-sandbox");
         opt.addArguments("–disable-dev-shm-usage");
         opt.addArguments("start-maximized");
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
+
+        opt.setBinary("/usr/bin/google-chrome");
         driver = new ChromeDriver(opt);
 
         String keyword = "test";
@@ -42,7 +44,7 @@ public class test {
         driver.get(url);
         System.out.println("Title: " + driver.getTitle());
 
-        reporter_7(url, keyword);
+//        reporter_7(url, keyword);
 
         driver.quit();
     }

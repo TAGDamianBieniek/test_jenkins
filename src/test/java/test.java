@@ -26,10 +26,10 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-//        opt.setBinary("/usr/bin/google-chrome");
+        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("headless");
-        opt.addArguments("window-size=1280x800");
+//        opt.addArguments("window-size=1280x800");
         opt.addArguments("no-sandbox");
         opt.addArguments("–disable-dev-shm-usage");
         opt.addArguments("start-maximized");

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -17,10 +18,9 @@ public class test {
     WebDriver driver;
     Helpers helper = new Helpers();
 
-    @Test
-    public void mainTest(){
-
-        System.out.println("TEST.................................................");
+    @BeforeTest
+    public void setup()
+    {
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
         File file = new File("/usr/local/bin/chromedriver");
@@ -38,6 +38,13 @@ public class test {
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);
+    }
+
+    @Test
+    public void mainTest(){
+
+        System.out.println("TEST.................................................");
+
 
         String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";

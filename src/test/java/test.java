@@ -37,13 +37,13 @@ public class test {
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
         opt.addArguments("--remote-debugging-port=9222");
-        opt.addArguments("--user-data-dir=~/.config/google-chrome");
+//        opt.addArguments("--user-data-dir=~/.config/google-chrome");
 
         driver = new ChromeDriver(opt);
 
         String keyword = "test";
         String url = "http://bip.piekary.pl/?c=179";
-        driver.get("https://Google.com");
+        driver.get("");
         System.out.println("Title: " + driver.getTitle());
 
 //        reporter_7(url, keyword);

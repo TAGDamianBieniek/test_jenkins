@@ -45,7 +45,7 @@ public class test {
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
         opt.setExperimentalOption("useAutomationExtension", false);
-//        driver = new ChromeDriver(opt);
+        driver = new ChromeDriver(opt);
 
         String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";

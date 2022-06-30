@@ -19,36 +19,47 @@ public class test {
 
     @Test
     public void mainTest(){
-//        WebDriverManager.chromedriver().setup();
-//        WebDriver driver = new ChromeDriver();
-        File file = new File("/usr/local/bin/chromedriver");
-        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+////        WebDriverManager.chromedriver().setup();
+////        WebDriver driver = new ChromeDriver();
+//        File file = new File("/usr/local/bin/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+//
+//
+//        ChromeOptions opt = new ChromeOptions();
+//        opt.setBinary("/usr/bin/google-chrome");
+//
+//        opt.addArguments("--no-sandbox");
+//        opt.addArguments("headless");
+////        opt.addArguments("--incognito");
+////        opt.addArguments("window-size=1280x800");
+//        opt.addArguments("–disable-dev-shm-usage");
+////        opt.addArguments("start-maximized");
+//        opt.addArguments("--disable-gpu");
+//        opt.addArguments("--disable-setuid-sandbox");
+//        opt.addArguments("--remote-debugging-port=9222");
+////        opt.addArguments("--user-data-dir=~/.config/google-chrome");
+//
+//        driver = new ChromeDriver(opt);
+//
+//        String keyword = "test";
+//        String url = "http://bip.piekary.pl/?c=179";
+//        driver.get("");
+//        System.out.println("Title: " + driver.getTitle());
+//
+////        reporter_7(url, keyword);
+//
+//        driver.quit();
+        try {
+            ProcessBuilder pb =
+                    new ProcessBuilder(
+                            "/usr/bin/google-chrome");
 
+            pb.start();
 
-        ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome");
-
-        opt.addArguments("--no-sandbox");
-        opt.addArguments("headless");
-//        opt.addArguments("--incognito");
-//        opt.addArguments("window-size=1280x800");
-        opt.addArguments("–disable-dev-shm-usage");
-//        opt.addArguments("start-maximized");
-        opt.addArguments("--disable-gpu");
-        opt.addArguments("--disable-setuid-sandbox");
-        opt.addArguments("--remote-debugging-port=9222");
-//        opt.addArguments("--user-data-dir=~/.config/google-chrome");
-
-        driver = new ChromeDriver(opt);
-
-        String keyword = "test";
-        String url = "http://bip.piekary.pl/?c=179";
-        driver.get("");
-        System.out.println("Title: " + driver.getTitle());
-
-//        reporter_7(url, keyword);
-
-        driver.quit();
+            System.out.println("Google Chrome launched!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public int countSelects(String keyWord){

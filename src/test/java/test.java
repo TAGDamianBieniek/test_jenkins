@@ -4,7 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -17,25 +21,56 @@ public class test {
     WebDriver driver;
     Helpers helper = new Helpers();
 
+    @BeforeTest
+    public void setUp() {
+        loadChromeDriver();
+    }
+
+    @AfterTest
+    public void tearDown() {
+        if (driver != null) {
+            driver.close();
+            driver.quit();
+        }
+    }
+
     @Test
-    public void mainTest(){
+    public void loadChromeDriver(){
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-        File file = new File("/usr/local/bin/chromedriver");
-        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+//        File file = new File("/usr/local/bin/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+//
+//
+//        ChromeOptions opt = new ChromeOptions();
+//        opt.setBinary("/usr/bin/google-chrome");
+//
+//        opt.addArguments("headless");
+//        opt.addArguments("window-size=1280x800");
+////        opt.addArguments("no-sandbox");
+//        opt.addArguments("–disable-dev-shm-usage");
+//        opt.addArguments("start-maximized");
+//        opt.addArguments("--disable-gpu");
+//        opt.addArguments("--disable-setuid-sandbox");
+//        driver = new ChromeDriver(opt);
 
-
-        ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome");
-
-        opt.addArguments("headless");
-        opt.addArguments("window-size=1280x800");
-//        opt.addArguments("no-sandbox");
-        opt.addArguments("–disable-dev-shm-usage");
-        opt.addArguments("start-maximized");
-        opt.addArguments("--disable-gpu");
-        opt.addArguments("--disable-setuid-sandbox");
-        driver = new ChromeDriver(opt);
+        ClassLoader classLoader = getClass().getClassLoader();
+        String filePath = classLoader.getResource("/usr/local/bin/chromedriver").getFile();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .usingDriverExecutable(new File(filePath))
+                .build();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox"); // Bypass OS security model, MUST BE THE VERY FIRST OPTION
+        options.addArguments("--headless");
+        options.setExperimentalOption("useAutomationExtension", false);
+        options.addArguments("start-maximized"); // open Browser in maximized mode
+        options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.merge(capabilities);
+        this.driver = new ChromeDriver(service, options);
 
         String keyword = "test";
         String url = "http://bip.piekary.pl/?c=179";

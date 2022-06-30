@@ -21,8 +21,8 @@ public class test {
     public void mainTest(){
         WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
 
         ChromeOptions opt = new ChromeOptions();
@@ -30,6 +30,7 @@ public class test {
 
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
+        opt.addArguments("--incognito");
 //        opt.addArguments("window-size=1280x800");
         opt.addArguments("–disable-dev-shm-usage");
         opt.addArguments("start-maximized");

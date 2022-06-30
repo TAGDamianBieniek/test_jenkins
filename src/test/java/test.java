@@ -28,7 +28,7 @@ public class test {
         opt.addArguments("--disable-setuid-sandbox");
         WebDriver driver = new ChromeDriver(opt);
 
-        driver.get("https://google.com");
+        driver.get("https://Google.com");
         System.out.println("Title: " + driver.getTitle());
 
 

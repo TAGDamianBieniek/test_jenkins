@@ -29,14 +29,14 @@ public class test {
         opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("--no-sandbox");
-        opt.addArguments("--headless");
+        opt.addArguments("headless");
 //        opt.addArguments("--incognito");
 //        opt.addArguments("window-size=1280x800");
-//        opt.addArguments("–disable-dev-shm-usage");
+        opt.addArguments("–disable-dev-shm-usage");
 //        opt.addArguments("start-maximized");
 //        opt.addArguments("--disable-gpu");
 //        opt.addArguments("--disable-setuid-sandbox");
-
+        opt.addArguments("--remote-debugging-port=9222");
 
         driver = new ChromeDriver(opt);
 

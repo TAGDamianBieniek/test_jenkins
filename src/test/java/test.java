@@ -26,9 +26,9 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
+        opt.setBinary("/usr/bin/google-chrome-stable");
 
-
-//        opt.addArguments("--no-sandbox");
+        opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
 //        opt.addArguments("window-size=1280x800");
         opt.addArguments("–disable-dev-shm-usage");
@@ -36,7 +36,7 @@ public class test {
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
 
-        opt.setBinary("/usr/bin/google-chrome");
+
         driver = new ChromeDriver(opt);
 
         String keyword = "test";

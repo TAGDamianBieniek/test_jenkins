@@ -37,6 +37,7 @@ public class test {
 //        opt.addArguments("--disable-gpu");
 //        opt.addArguments("--disable-setuid-sandbox");
         opt.addArguments("--remote-debugging-port=9222");
+        opt.addArguments("--user-data-dir=~/.config/google-chrome");
 
         driver = new ChromeDriver(opt);
 

@@ -28,7 +28,7 @@ public class test {
         ChromeOptions opt = new ChromeOptions();
 
 
-        opt.addArguments("--no-sandbox");
+//        opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
 //        opt.addArguments("window-size=1280x800");
         opt.addArguments("–disable-dev-shm-usage");

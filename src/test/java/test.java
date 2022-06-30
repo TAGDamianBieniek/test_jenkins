@@ -26,7 +26,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/chrome");
+        opt.setBinary("/etc/alternatives/google-chrome");
 
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");

@@ -55,7 +55,7 @@ public class test {
 //        driver = new ChromeDriver(opt);
 
         ClassLoader classLoader = getClass().getClassLoader();
-        String filePath = classLoader.getResource("/usr/local/bin/chromedriver").getFile();
+        String filePath = classLoader.getResource("chromedriver").getFile();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeDriverService service = new ChromeDriverService.Builder()
                 .usingDriverExecutable(new File(filePath))

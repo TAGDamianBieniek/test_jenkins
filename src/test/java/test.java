@@ -34,8 +34,8 @@ public class test {
 //        opt.addArguments("window-size=1280x800");
         opt.addArguments("–disable-dev-shm-usage");
 //        opt.addArguments("start-maximized");
-//        opt.addArguments("--disable-gpu");
-//        opt.addArguments("--disable-setuid-sandbox");
+        opt.addArguments("--disable-gpu");
+        opt.addArguments("--disable-setuid-sandbox");
         opt.addArguments("--remote-debugging-port=9222");
         opt.addArguments("--user-data-dir=~/.config/google-chrome");
 
@@ -43,7 +43,7 @@ public class test {
 
         String keyword = "test";
         String url = "http://bip.piekary.pl/?c=179";
-        driver.get(url);
+        driver.get("https://Google.com");
         System.out.println("Title: " + driver.getTitle());
 
 //        reporter_7(url, keyword);

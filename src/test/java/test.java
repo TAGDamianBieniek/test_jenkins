@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class test {
-    RemoteWebDriver driver;
-//    WebDriver driver;
+
+    WebDriver driver;
     Helpers helper = new Helpers();
 
     @Test
@@ -47,15 +47,12 @@ public class test {
         opt.setExperimentalOption("useAutomationExtension", false);
 //        driver = new ChromeDriver(opt);
 
-        URL url = new URL("http://localhost:4444/wd/hub");
-        driver = new RemoteWebDriver(url,opt);
-
         String keyword = "Budowa";
-//        String url = "http://bip.piekary.pl/?c=179";
-        driver.get("https://google.com");
+        String url = "http://bip.piekary.pl/?c=179";
+        driver.get(url);
         System.out.println("Title: " + driver.getTitle());
 
-//        reporter_7(url, keyword);
+        reporter_7(url, keyword);
 
     }
 

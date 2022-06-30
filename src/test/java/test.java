@@ -25,13 +25,13 @@ public class test {
     public void test(){
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
 
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary("/usr/local/bin/chromedriver");
-        opt.setBinary("/usr/bin/google-chrome");
+//        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("headless");
         opt.addArguments("window-size=1280x800");

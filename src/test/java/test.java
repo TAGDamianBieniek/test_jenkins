@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,17 +15,20 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.Locale;
 
 public class test {
-    WebDriver driver;
+    RemoteWebDriver driver;
+//    WebDriver driver;
     Helpers helper = new Helpers();
 
     @Test
-    public void test(){
+    public void test() throws MalformedURLException {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+//        WebDriver driver = new ChromeDriver();
 //        File file = new File("/usr/local/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 //        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
@@ -41,14 +45,17 @@ public class test {
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
         opt.setExperimentalOption("useAutomationExtension", false);
-        driver = new ChromeDriver(opt);
+//        driver = new ChromeDriver(opt);
+
+        URL url = new URL("http://localhost:4444/wd/hub");
+        driver = new RemoteWebDriver(url,opt);
 
         String keyword = "Budowa";
-        String url = "http://bip.piekary.pl/?c=179";
-        driver.get(url);
+//        String url = "http://bip.piekary.pl/?c=179";
+        driver.get("https://google.com");
         System.out.println("Title: " + driver.getTitle());
 
-        reporter_7(url, keyword);
+//        reporter_7(url, keyword);
 
     }
 

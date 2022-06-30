@@ -19,17 +19,15 @@ public class test {
 
     @Test
     public void mainTest(){
-//        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-        File file = new File("/usr/local/bin/chromedriver");
+//        File file = new File("/usr/local/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
 
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary("/usr/bin/google-chrome-stable");
 
-        opt.setExperimentalOption("useAutomationExtension", false);
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
 //        opt.addArguments("window-size=1280x800");

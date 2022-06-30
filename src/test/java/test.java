@@ -26,7 +26,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/opt/google/chrome/google-chrome");
+        opt.setBinary("/opt/google/chrome/chrome-sandbox");
 
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");

@@ -1,22 +1,15 @@
 import helpers.Helpers;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.List;
 import java.util.Locale;
 
@@ -26,11 +19,12 @@ public class test {
     Helpers helper = new Helpers();
 
     @Test
-    public void test() throws MalformedURLException {
-        WebDriverManager.chromedriver().setup();
+    public void test(){
+        System.out.println(":::::::::test::::::::::::::::");
+//        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 //        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
 
@@ -44,7 +38,6 @@ public class test {
         opt.addArguments("start-maximized");
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
-        opt.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver(opt);
 
         String keyword = "Budowa";

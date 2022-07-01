@@ -30,7 +30,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome");
+        opt.setBinary("/usr/bin/google-chrome-stable");
 
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");

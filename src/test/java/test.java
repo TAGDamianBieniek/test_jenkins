@@ -22,25 +22,22 @@ public class test {
     @Test
     public void test(){
         System.out.println(":::::::::test::::::::::::::::");
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 //        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
 
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary("/usr/bin/google-chrome");
 
-        opt.setExperimentalOption("useAutomationExtension", false);
         opt.addArguments("--no-sandbox");
-//        opt.addArguments("--headless");
-////        opt.addArguments("window-size=1280x800");
-//        opt.addArguments("--disable-extensions");
-//        opt.addArguments("–-disable-dev-shm-usage");
-//        opt.addArguments("--start-maximized");
-//        opt.addArguments("--disable-gpu");
-//        opt.addArguments("--disable-setuid-sandbox");
+        opt.addArguments("--headless");
+        opt.addArguments("–-disable-dev-shm-usage");
+        opt.addArguments("--start-maximized");
+        opt.addArguments("--disable-gpu");
+        opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);
 
         String keyword = "Budowa";

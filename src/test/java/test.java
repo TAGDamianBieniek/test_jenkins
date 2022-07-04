@@ -41,11 +41,11 @@ public class test {
         opt.addArguments("--disable-setuid-sandbox");
         opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         opt.setExperimentalOption("useAutomationExtension", false);
-        driver = new ChromeDriver(opt);
+        driver = new ChromeDriver();
 
         String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";
-        driver.get(url);
+        driver.get("http://google.com");
         System.out.println("Title: " + driver.getTitle());
 
         reporter_7(url, keyword);

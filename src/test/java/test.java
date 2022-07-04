@@ -26,13 +26,13 @@ public class test {
         System.out.println(":::::::::test::::::::::::::::x");
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 //        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome-stable");
+        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");

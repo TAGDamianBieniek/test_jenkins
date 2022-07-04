@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -30,7 +31,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/opt/google/chrome/google-chrome");
+        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
@@ -38,6 +39,8 @@ public class test {
         opt.addArguments("--start-maximized");
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
+        opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        opt.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver(opt);
 
         String keyword = "Budowa";

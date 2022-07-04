@@ -32,12 +32,12 @@ public class test {
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary("/usr/bin/google-chrome");
 
-        opt.addArguments("--no-sandbox");
+//        opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
 //        opt.addArguments("window-size=1280x800");
         opt.addArguments("--disable-extensions");
         opt.addArguments("–-disable-dev-shm-usage");
-        opt.addArguments("start-maximized");
+        opt.addArguments("--start-maximized");
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
         driver = new ChromeDriver(opt);

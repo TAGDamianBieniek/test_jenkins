@@ -28,11 +28,11 @@ public class test {
 //        WebDriver driver = new ChromeDriver();
 //        File file = new File("/usr/local/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-//        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
 
         ChromeOptions opt = new ChromeOptions();
-//        opt.setBinary("/usr/bin/google-chrome");
+        opt.setBinary("/usr/bin/chromium-browser");
 
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");

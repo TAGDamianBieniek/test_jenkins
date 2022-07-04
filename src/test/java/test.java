@@ -33,6 +33,7 @@ public class test {
         ChromeOptions opt = new ChromeOptions();
 //        opt.setBinary("/usr/bin/google-chrome");
 
+        opt.addArguments("--remote-debugging-port=9222");
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
         opt.addArguments("–-disable-dev-shm-usage");

@@ -22,10 +22,10 @@ public class test {
     @Test
     public void test(){
         System.out.println(":::::::::test::::::::::::::::");
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+        File file = new File("/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 //        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
 

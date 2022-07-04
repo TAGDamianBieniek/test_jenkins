@@ -42,7 +42,7 @@ public class test {
         opt.addArguments("--disable-setuid-sandbox");
         opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         opt.setExperimentalOption("useAutomationExtension", false);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(opt);
 
         String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";

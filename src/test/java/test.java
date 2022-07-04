@@ -24,11 +24,7 @@ public class test {
     public void test(){
         System.out.println(":::::::::test::::::::::::::::x");
         System.out.println(":::::::::test::::::::::::::::x");
-//        WebDriverManager.chromedriver().setup();
-//        WebDriver driver = new ChromeDriver();
-//        File file = new File("/usr/local/bin/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-//        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+
 
 
         ChromeOptions opt = new ChromeOptions();

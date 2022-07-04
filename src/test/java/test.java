@@ -31,7 +31,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-//        opt.setBinary("/usr/bin/google-chrome");
+        opt.setBinary("/usr/bin/google-chrome-stable");
 
         opt.addArguments("--remote-debugging-port=9222");
         opt.addArguments("--no-sandbox");

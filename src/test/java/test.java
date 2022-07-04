@@ -24,7 +24,7 @@ public class test {
     public void test(){
         System.out.println(":::::::::test::::::::::::::::x");
         System.out.println(":::::::::test::::::::::::::::x");
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
 //        File file = new File("/usr/local/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
@@ -32,7 +32,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/google-chrome");
+//        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("--lang=es");
         opt.addArguments("--no-sandbox");

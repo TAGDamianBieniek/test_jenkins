@@ -22,7 +22,8 @@ public class test {
 
     @Test
     public void test(){
-        System.out.println(":::::::::test::::::::::::::::");
+        System.out.println(":::::::::test::::::::::::::::x");
+        System.out.println(":::::::::test::::::::::::::::x");
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
 //        File file = new File("/usr/local/bin/chromedriver");
@@ -33,15 +34,12 @@ public class test {
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary("/usr/bin/google-chrome-stable");
 
-        opt.addArguments("--remote-debugging-port=9222");
         opt.addArguments("--no-sandbox");
         opt.addArguments("--headless");
         opt.addArguments("–-disable-dev-shm-usage");
         opt.addArguments("--start-maximized");
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
-        opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-        opt.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver(opt);
 
         String keyword = "Budowa";

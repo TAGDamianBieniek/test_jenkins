@@ -28,7 +28,7 @@ public class test {
 //        WebDriver driver = new ChromeDriver();
 //        File file = new File("/usr/local/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-//        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
 
         ChromeOptions opt = new ChromeOptions();
@@ -40,7 +40,7 @@ public class test {
         opt.addArguments("--start-maximized");
         opt.addArguments("--disable-gpu");
         opt.addArguments("--disable-setuid-sandbox");
-        driver = new ChromeDriver(opt);
+        driver = new ChromeDriver();
 
         String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";

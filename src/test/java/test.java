@@ -48,6 +48,7 @@ public class test {
 
         reporter_7(url, keyword);
 
+        driver.quit();
     }
 
     public int countSelects(String keyWord){

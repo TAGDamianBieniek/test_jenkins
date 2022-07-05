@@ -59,8 +59,8 @@ public class test {
 
     public void reporter_7(String URL, String keyWord){
 
-//        String outputFile = (helper.todayDateFromPattern("dd-MM-yyyy") + "_przetargi.html");
-        String outputFile = ("przetargi.html");
+        String outputFile = (helper.todayDateFromPattern("dd-MM-yyyy") + "_przetargi.html");
+//        String outputFile = ("przetargi.html");
         String style = "style='border: 1px solid black; padding: 3px; text-align: center;'";
         try {
             FileWriter txtOutput = new FileWriter(outputFile, true);

@@ -32,7 +32,7 @@ public class test {
 
 
         ChromeOptions opt = new ChromeOptions();
-        opt.setBinary("/usr/bin/chromium-browser");
+        opt.setBinary("/usr/bin/google-chrome");
 
         opt.addArguments("--lang=en");
         opt.addArguments("--no-sandbox");

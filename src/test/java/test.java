@@ -43,10 +43,10 @@ public class test {
 
         String keyword = "Budowa";
         String url = "http://bip.piekary.pl/?c=179";
-        driver.get("http://google.com");
+        driver.get(url);
         System.out.println("Title: " + driver.getTitle());
 
-//        reporter_7(url, keyword);
+        reporter_7(url, keyword);
 
     }
 

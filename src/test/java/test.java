@@ -21,7 +21,7 @@ public class test {
     Helpers helper = new Helpers();
 
     @Test
-    public void test(){
+    public void test1(){
         System.out.println(":::::::::test::::::::::::::::x");
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
